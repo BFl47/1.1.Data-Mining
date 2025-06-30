@@ -19,4 +19,4 @@ Exercises e group project.
 ## University
 - Mannheim University
 - Master of Science (M.Sc.) degree
-- Program: Data Science
+- Data Science program
