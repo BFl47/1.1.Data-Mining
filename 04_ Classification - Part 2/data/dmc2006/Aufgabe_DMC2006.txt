@@ -1,0 +1,193 @@
+DATA-MINING-CUP 2006
+
+Aufgabenstellung
+================
+
+Ausgangssituation
+-----------------
+Versteigerungsplattformen sind heute ein fester Bestandteil des
+Internet. So haben auch die meisten von uns schon Artikel ver- oder
+ersteigert. Ein Name, der stellvertretend für diesen Erfolg steht, ist
+sicherlich eBay. Die weltweit erfolgreichste Internet-Auktions-
+Plattform ist durch ihre Reichweite gleichermaßen für Privatauktionen
+wie für gewerbliche Anbieter interessant. Allen gemeinsam ist wohl auch
+das Ziel, als Einsteller einer Auktion in ihrem Rahmen einen angemessen
+Preis zu erzielen. Die Frage stellt sich: "Wie erhalte ich den optimalen
+(höchsten) Preis?" Viele mehr oder weniger berufene Auktions-Experten
+empfehlen hier kurze oder lange Laufzeiten, niedrige oder hohe
+Startpreise, Auktionsenden am Wochenende oder Wochentags, und viele
+Varianten mehr, die absolut sicher zum Erfolg führen sollen. Im Rahmen
+des DMC 2006 Wettbewerbs wollen wir diese Frage wissenschaftlich
+beantworten. 
+
+
+Szenario
+--------
+Ein Elektronik-Handelsunternehmen stellt fest, dass seine Internet-
+Auktionen zum Teil sehr unterschiedliche Verkaufserlöse erzielen.
+Muster, die zu einer Erklärung führen, sind für den Verkaufsleiter nicht
+zu erkennen. Vor dem Hintergrund der Erlösmaximierung möchte das
+Unternehmen nun mittels Data Mining einen Vorschlag für eine optimale
+Auktionslistung (Start- und Endzeitpunkte, Laufzeit, Zusatzmerkmale,
+etc.) erarbeiten. In einer ersten Fragestellung ist dafür ein Data
+Mining Modell zu erstellen, welches in der Lage ist, für jede neu
+eingestellte Auktion eine Vorhersage zu treffen, ob der tatsächlich
+eintretende Verkaufserlös über dem durchschnittlichen Verkaufserlös für
+diese Produktkategorie liegen wird.
+
+Um diese Aufgabenstellung zu bearbeiten, fordert das Handelsunternehmen
+bei eBay Daten zu abgelaufenen Auktionen der letzten Monate über das
+eBay-Marktdatenprogramm an. Die nach den geltenden
+Datenschutzrichtlinien bereitgestellten Daten enthalten u.a. alle
+notwendigen Informationen für die Lösung dieser Aufgabe.  
+
+Im konkreten Fall soll eine Stichprobe von 8.000 Online-Auktionen aus
+der Kategorie "Audio&Hi-Fi:MP3-Player:Apple iPod" zur Gewinnung einer
+Beschreibung (Klassifikationsmodell) für die Vorhersage des
+Verkaufserlöses untersucht werden.
+ 
+Die Stichprobe (dmc2006_train.txt) umfasst für diese 8.000 Auktionen
+einen Auszug auktionsrelevanter Daten. Eine genaue Beschreibung der
+Merkmale befindet sich in der Datei DMC2006_Merkmale.pdf. 
+
+Zusätzlich wurde schon der mittlere Verkaufserlös der Produktkategorie
+(item_leaf_category_name) als Merkmal category_avg_gms berechnet und im
+Merkmal gms_greater_avg festgehalten, ob der erzielte Verkaufserlös über
+dem mittleren Verkaufserlös der Produktkategorie liegt.
+
+Unter Verwendung der Lerndaten (dmc2006_train.txt) ist ein
+entsprechendes Modell zur Prognose, ob der eintretende Verkaufserlös
+über dem durchschnittlichen Verkaufserlös für die zugehörige
+Produktkategorie liegen wird, zu entwickeln. Ein Verkaufserlös über dem
+Mittelwert wird dabei als Hochpreis, ein Verkaufserlös unter oder gleich
+dem Mittelwert als Niedrigpreis bezeichnet.
+
+Im Rahmen des DATA-MINING-CUP Wettbewerbs soll das Modell zum Test
+exemplarisch auf weitere 8.000 Online-Auktionen (dmc2006_class.txt)
+angewandt werden, um die Klassenzugehörigkeit (Niedrigpreis oder
+Hochpreis) zu ermitteln. 
+
+Die folgende einfache Kostenmatrix bildet die Grundlage für die
+Optimierung der Klassifikation in Hoch- oder Niedrigpreisklasse:
+
+                         | Hocherlös  |  Niedrigerlös
+                         | erzielt    |  erzielt
+-------------------------|------------|--------------
+Auktionserlös wird als   |   1 Punkt  |   -1 Punkt
+Hocherlös eingestuft     |            |
+-------------------------|------------|--------------
+Auktionserlös wird als   | - 1 Punkt  |    1 Punkt
+Niedrigerlös eingestuft  |            |
+
+Ziel ist es, eine maximale Punkteanzahl, d.h. hier richtige
+Klassenzuordnungen, zu erreichen. 
+
+
+Aufgabe
+-------
+Folgende Data-Mining-Aufgabe ist zu bearbeiten:
+
+Aus den Daten (dmc2006_train.txt) ist ein Data-Mining-Modell zu
+generieren, das eine Klassenzuordnung trifft (Hoch- oder Niedrigerlös).
+Dieses Modell ist exemplarisch auf die ausgewählten 8.000 zu klassi-
+fizierenden Online-Auktionen (dmc2006_train.txt) anzuwenden.
+
+
+Einreichung des Ergebnisses
+---------------------------
+Einsendeschluss der Aufgabe ist Mittwoch, 31.05.2006, 24:00 Uhr. 
+
+Als Ergebnis ist eine Liste der prognostizierten Auktionen in der Form
+<ID>,<KLASSE> zu liefern. 
+
+Bei <KLASSE> soll hierbei N für Niedrigerlös und H für Hocherlös
+verwendet werden. 
+
+Die Liste ist als Textdatei (nur DOS-Files, kein Unicode) an die
+E-Mail-Adresse dmc@prudsys.de zu senden. 
+
+Der Name der Datei ist aus der Teilnehmer-ID wie folgt
+zu bilden:
+
+   <Teilnehmer-ID>.txt (z.B. 0534-9823.txt)
+
+Nur so ist es möglich, die eingesandte Lösung richtig dem jeweiligen
+Wettbewerbsteilnehmer zuzuordnen.
+
+Anmerkung: Ihre Teilnehmer-ID ist identisch mit dem Downloadpasswort,
+welches Ihnen mit der Registrierung zum Wettbewerb zugegangen ist.
+
+In der Datei sind somit ID-Merkmal und zugehörige Klasse einzutragen,
+und zwar jedes ID-Merkmal auf einer Zeile:
+
+   ...
+   73846,N
+   73892,H
+   73268,N
+   73726,N
+   ...
+
+
+Daten
+-----
+Zwei Textdateien werden zur Verfügung gestellt:
+
+   dmc2006_train.txt ... Trainingsmenge, 8.000 Datensätze,
+      Das Zielmerkmal lautet "gms_greater_avg".
+      Das ID-Merkmal heißt "auct_id".
+      
+   dmc2006_class.txt ... Daten von 8.000 Bestellungen, für die
+      eine Vorhersage zu treffen ist.
+
+Die einzelnen Spalten sind durch Tabulator voneinander getrennt. Sofern
+keine Werte angegeben wurden, sind die Werte nicht bekannt, sie sind in
+diesen Fällen als fehlende Werte zu behandeln.
+
+
+Bewertung der Ergebnisse
+------------------------
+Der Jury ist das Merkmal "gms_greater_avg" aller 8.000 zu bewertenden
+Bestellungen (dmc2006_class.txt) bekannt. Die eingesandten Ergebnisse
+werden mit der bekannten Information über die tatsächliche Zuordnung
+nach der im Szenario beschriebenen Regel verglichen und gemäß der unten
+stehenden Kostenmatrix bewertet. 
+
+Zur Bewertung der korrekten Klassenzuordnung wird folgende Kostenmatrix
+angesetzt (siehe Text oben):
+
+   |  H    N
+---------------
+H  |  1   -1 
+   |
+N  | -1    1  
+
+Das heißt, wurde laut Modell eine Auktion der Klasse H zugeordnet, und
+gehört diese auch tatsächlich zur Klasse H (Hocherlös), dann bekommt der
+Teilnehmer für diesen Datensatz 1 Punkt. Wurde die Auktion
+fälschlicherweise der Klasse N zugeordnet, erhält der Teilnehmer für
+diesen Datensatz -1 Punkt.
+ 
+Gewinner ist der Teilnehmer mit der höchsten Punktzahl. Im Fall von
+Punktgleichheit entscheidet das Los. Der Rechtsweg ist ausgeschlossen.
+
+
+Beschreibung der Merkmale
+-------------------------
+Die verwendeten Merkmale sind in der Datei DMC2006_Merkmale.pdf
+beschrieben.
+
+
+V I E L   E R F O L G   B E I M   L Ö S E N   D E R
+D M C   A U F G A B E   2 0 0 6
+
+
+Kontakt
+-------
+prudsys AG
+DMC Team
+Bergstraße 61
+09113 Chemnitz
+
+E-Mail: dmc@prudsys.de
+WWW:    http://www.data-mining-cup.de
+

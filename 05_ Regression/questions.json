@@ -1,0 +1,152 @@
+[
+    {
+        "question": "What is the primary goal of regression in machine learning?",
+        "options": [
+            "Classify data points",
+            "Predict numerical values",
+            "Cluster data",
+            "Reduce dimensionality"
+        ],
+        "answer": "Predict numerical values"
+    },
+    {
+        "question": "Which of the following is NOT a regression technique?",
+        "options": [
+            "Linear Regression",
+            "Decision Tree",
+            "K-Nearest Neighbors",
+            "Na\u00efve Bayes"
+        ],
+        "answer": "Na\u00efve Bayes"
+    },
+    {
+        "question": "Which of the following is the a common loss function for regression models?",
+        "options": [
+            "Accuracy",
+            "Mean Squared Error",
+            "F1-Score",
+            "Silhouette Score"
+        ],
+        "answer": "Mean Squared Error"
+    },
+    {
+        "question": "Which of the following best describes the bias-variance tradeoff?",
+        "options": [
+            "Increasing bias decreases variance",
+            "Increasing variance decreases bias",
+            "Balancing between underfitting and overfitting",
+            "Bias and variance are independent"
+        ],
+        "answer": "Balancing between underfitting and overfitting"
+    },
+    {
+        "question": "What does R\u00b2 (R-squared) measure in regression?",
+        "options": [
+            "Model complexity",
+            "Goodness of fit",
+            "Bias of the model",
+            "Feature correlation"
+        ],
+        "answer": "Goodness of fit"
+    },
+    {
+        "question": "What is the primary purpose of Ridge Regression?",
+        "options": [
+            "Avoid overfitting",
+            "Improve training speed",
+            "Reduce bias",
+            "Increase complexity"
+        ],
+        "answer": "Avoid overfitting"
+    },
+    {
+        "question": "Which regularization technique encourages sparsity in regression models?",
+        "options": [
+            "Ridge Regression",
+            "Lasso Regression",
+            "Polynomial Regression",
+            "KNN Regression"
+        ],
+        "answer": "Lasso Regression"
+    },
+    {
+        "question": "Which of the following models is the least interpretable?",
+        "options": [
+            "Decision Tree",
+            "Linear Regression",
+            "Neural Network",
+            "K-Nearest Neighbors"
+        ],
+        "answer": "Neural Network"
+    },
+    {
+        "question": "Which of these models would be best for interpolating a function?",
+        "options": [
+            "Linear Regression",
+            "KNN Regression",
+            "Polynomial Regression",
+            "ANNs for Regression"
+        ],
+        "answer": "Polynomial Regression"
+    },
+    {
+        "question": "What happens if you increase the degree of a polynomial regression too much?",
+        "options": [
+            "Underfitting",
+            "Overfitting",
+            "Better generalization",
+            "Lower variance"
+        ],
+        "answer": "Overfitting"
+    },
+    {
+        "question": "Which of the following is an advantage of Decision Tree Regression over Linear Regression?",
+        "options": [
+            "Better for non-linear relationships",
+            "Easier to interpret",
+            "Less prone to overfitting",
+            "Works better with categorical features"
+        ],
+        "answer": "Better for non-linear relationships"
+    },
+    {
+        "question": "What is the key difference between Model Trees and Regression Trees?",
+        "options": [
+            "Model Trees have linear functions at the leaves",
+            "Regression Trees use decision boundaries",
+            "Model Trees use polynomial splits",
+            "Regression Trees are only used for binary targets"
+        ],
+        "answer": "Model Trees have linear functions at the leaves"
+    },
+    {
+        "question": "Which technique is most effective in preventing overfitting?",
+        "options": [
+            "Using more features",
+            "Regularization",
+            "Increasing model complexity",
+            "Reducing training data"
+        ],
+        "answer": "Regularization"
+    },
+    {
+        "question": "Which type of regression is best for predicting monotonic trends?",
+        "options": [
+            "Polynomial Regression",
+            "Ridge Regression",
+            "Isotonic Regression",
+            "ANN Regression"
+        ],
+        "answer": "Isotonic Regression"
+    },
+    {
+        "question": "Which of the following is a disadvantage of Local Regression?",
+        "options": [
+            "Slow at runtime",
+            "Cannot model non-linear relationships",
+            "Requires a large dataset",
+            "Less interpretable than ANNs"
+        ],
+        "answer": "Slow at runtime"
+    }
+]

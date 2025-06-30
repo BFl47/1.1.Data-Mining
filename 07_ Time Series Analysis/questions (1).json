@@ -1,0 +1,112 @@
+[
+    {
+        "question": "What is the primary challenge when using moving averages for prediction in time series data?",
+        "options": [
+            "Computational complexity",
+            "The prediction lags behind actual trends",
+            "It cannot handle seasonal effects",
+            "It requires too many data points"
+        ],
+        "answer": "The prediction lags behind actual trends",
+        "page": 39
+    },
+    {
+        "question": "In the component model of time series, which formula represents the multiplicative model?",
+        "options": [
+            "Series = T + C + S + R",
+            "Series = T x C x S x R",
+            "Series = (T + C) x (S + R)",
+            "Series = T + (C x S x R)"
+        ],
+        "answer": "Series = T x C x S x R",
+        "page": 14
+    },
+    {
+        "question": "Which method for handling missing values in time series data generally produces the most natural-looking results?",
+        "options": [
+            "Replacing with the global average",
+            "Linear interpolation",
+            "Setting values to zero",
+            "Replacing with the previous value"
+        ],
+        "answer": "Linear interpolation",
+        "page": 50
+    },
+    {
+        "question": "What parameter is essential to configure when using Triple Exponential Smoothing (Holt-Winters Method) on data with seasonal patterns?",
+        "options": [
+            "Learning rate",
+            "Cycle length (seasonal length)",
+            "Error threshold",
+            "Regression coefficient"
+        ],
+        "answer": "Cycle length (seasonal length)",
+        "page": 43
+    },
+    {
+        "question": "Which of the following statements about autoregressive models is FALSE?",
+        "options": [
+            "They can learn periodicities in the data",
+            "The weights for lag variables are learned from the data",
+            "They produce strictly linear predictions",
+            "They can be understood as regression trained on the time series itself"
+        ],
+        "answer": "They produce strictly linear predictions",
+        "page": 35
+    },
+    {
+        "question": "When analyzing the seasonal effect in a hotel occupancy rate time series, what does a seasonal index of 1.171 for Quarter 3 indicate?",
+        "options": [
+            "Quarter 3 occupancy is 17.1% below the annual average",
+            "Quarter 3 occupancy is 17.1% above the annual average",
+            "Quarter 3 occupancy is 1.171 times the one of Quarter 2",
+            "Quarter 3 has the highest occupancy of all quarters"
+        ],
+        "answer": "Quarter 3 occupancy is 17.1% above the annual average",
+        "page": 24
+    },
+    {
+        "question": "What is the main difference between Single and Double Exponential Smoothing?",
+        "options": [
+            "Double Exponential Smoothing handles missing values",
+            "Double Exponential Smoothing accounts for the trend component",
+            "Double Exponential Smoothing uses two different smoothing factors",
+            "Double Exponential Smoothing applies the same smoothing twice"
+        ],
+        "answer": "Double Exponential Smoothing accounts for the trend component",
+        "page": 40
+    },
+    {
+        "question": "Which evaluation approach is MOST appropriate for time series predictions?",
+        "options": [
+            "Random k-fold cross-validation",
+            "Leave-one-out cross-validation",
+            "Sliding window evaluation or hold-out set at the end",
+            "Bootstrapping"
+        ],
+        "answer": "Sliding window evaluation or hold-out set at the end",
+        "page": 53
+    },
+    {
+        "question": "What is the key difference between seasonal effects and cyclical effects in time series?",
+        "options": [
+            "Seasonal effects are less predictable than cyclical effects",
+            "Seasonal effects occur at fixed intervals, cyclical do not",
+            "Seasonal effects can be modeled, but cyclical effects cannot",
+            "Seasonal effects are short-term, while cyclical effects are long-term"
+        ],
+        "answer": "Seasonal effects occur at fixed intervals, cyclical do not",
+        "page": 15
+    },
+    {
+        "question": "When using lag variables for nominal prediction (such as weather forecasting), what needs to be created first?",
+        "options": [
+            "A moving average baseline",
+            "A windowed representation of the data",
+            "A seasonal decomposition",
+            "A linear regression model"
+        ],
+        "answer": "A windowed representation of the data",
+        "page": 36
+    }
+]
