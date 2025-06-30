@@ -14,7 +14,7 @@ Exercises e group project.
 - Association Analysis
 - Practical Data Mining using Python
 
-**Goals**: To acquire basic knowledge of the techniques, opportunities, and applications of data mining
+**Goals**: Acquire basic knowledge of the techniques, opportunities, and applications of data mining
 
 ## University
 - Mannheim University
