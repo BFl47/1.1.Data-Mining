@@ -3,7 +3,7 @@
 **A.A.**: FSS 2025
 
 ## Description
-Exercises e group project.
+Exercises and group project.
 
 **Topics**: 
 - Goals and Principles of Data Mining
